@@ -1,0 +1,29 @@
+1- INSTALAR BOOTSTRAP, FIREBASE E FONT-AWESOME
+yarn add firebase @angular/fire font-awesome bootstrap @ng-bootstrap/ng-bootstrap --save
+
+2- ADICIONAR OS IMPORTS PARA O APP MODULE (Arquivo app.module.ts)
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
+
+3 - ADICIONAR AS DEPENDENCIAS DO IMPORT DO APP MODULE (Arquivo app.module.ts)
+AngularFireModule.initializeApp(environment.firebase),
+AngularFirestoreModule,
+NgbModule,
+ReactiveFormsModule
+
+4 - ADICIONANDO OS ESTILOS DO BOOTSTRAP NO PROJETO (Arquivo angular.json)
+"styles": [
+    "node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "src/styles.css"
+],
+
+-------------------------------------------------------------------------------------
+
+TIPS:
+
+Adicionando novo componente
+    ng generate component [nome do componente] ou [caminho/nome do componente]
+    ex.: ng generate component clientes/cliente
